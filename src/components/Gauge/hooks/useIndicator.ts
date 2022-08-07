@@ -10,7 +10,7 @@ export const useIndicator = ({ intervalPerDeg }: UseIndicatorProps) => {
 
   useEffect(() => {
     setTimeout(() => {
-      if (rotateDegIndicator <= 90) {
+      if (rotateDegIndicator < 90) {
         setRotateDegIndicator(rotateDegIndicator + intervalPerDeg)
       } else {
         setRotateDegIndicator(-90)

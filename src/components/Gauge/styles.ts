@@ -36,10 +36,14 @@ export const IndicatorValueBackground = styled.div<IndicatorProps>`
   transform: ${({ rotate }) => css`translate(-50%, -50%) rotate(${rotate}deg)`};
 `;
 
-export const IndicatorValue = styled.div`
+interface IndicatorValueProps {
+  color?: string
+}
+
+export const IndicatorValue = styled.div<IndicatorValueProps>`
   width: 1rem;
   height: 1.5rem;
-  background: #FFF;
+  background: ${({ color }) => color || "#FFF"};
   border-radius: 0.5rem;
   position: absolute;
   left: 50%;

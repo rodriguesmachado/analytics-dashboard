@@ -6,7 +6,7 @@ import { useIndicatorPerColors } from "./hooks/useIndicatorPerColors";
 
 export const ChartGauge: FunctionComponent = () => {
 
-  const INTERVAL_PER_DEG = 9;
+  const INTERVAL_PER_DEG = 15;
   const rotateDegIndicator = useIndicator({ intervalPerDeg: INTERVAL_PER_DEG });
   const indicatorPerColors = useIndicatorPerColors({ intervalPerDeg: INTERVAL_PER_DEG })
 
