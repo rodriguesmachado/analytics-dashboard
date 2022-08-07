@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   height: 18rem;
@@ -13,31 +13,27 @@ export const Gauge = styled.div`
   overflow: hidden;
 `;
 
-interface GaugeIndicatorBackgroundProps {
+interface IndicatorProps {
   rotate: number
 }
 
-export const GaugeIndicatorBackground = styled.div<GaugeIndicatorBackgroundProps>`
+export const GaugeIndicatorBackground = styled.div<IndicatorProps>`
   width: 4rem;
   height: 18rem;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform:${({ rotate }) => `translate(-50%, -50%) rotate(${rotate}deg)`};
+  transform:${({ rotate }) => css`translate(-50%, -50%) rotate(${rotate}deg)`};
   transition: transform 1s;
 `;
 
-interface IndicatorValueBackgroundProps {
-  rotate: number
-}
-
-export const IndicatorValueBackground = styled.div<IndicatorValueBackgroundProps>`
+export const IndicatorValueBackground = styled.div<IndicatorProps>`
   width: 4rem;
   height: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: ${({ rotate }) => `translate(-50%, -50%) rotate(${rotate}deg)`};
+  transform: ${({ rotate }) => css`translate(-50%, -50%) rotate(${rotate}deg)`};
 `;
 
 export const IndicatorValue = styled.div`
