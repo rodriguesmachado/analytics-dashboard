@@ -14,15 +14,15 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 62.5%;
     
     @media(max-width: 900px){
-      font-size: 50%;
+      font-size: 55%;
     }
 
     @media(max-width: 700px){
-      font-size: 40%;
+      font-size: 50%;
     }
 
     @media(max-width: 500px){
-      font-size: 30%;
+      font-size: 45%;
     }
 
   }

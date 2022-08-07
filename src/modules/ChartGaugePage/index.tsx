@@ -6,7 +6,11 @@ export const ChartGaugePage: FunctionComponent = () => {
 
   return (
     <S.Container>
-      <ChartGauge />
+      <ChartGauge
+        maxValue={100}
+        currentValue={58}
+        unit="°"
+      />
     </S.Container>
   )
 }
