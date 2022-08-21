@@ -9,13 +9,15 @@ interface ChartGaugeProps {
   currentValue: number;
   unit?: string
   disableTextIndicatorPerColors?: boolean
+  backgroundColor?: string
 }
 
 export const ChartGauge: FunctionComponent<ChartGaugeProps> = ({
   maxValue = 100,
   currentValue = 0,
   unit = "",
-  disableTextIndicatorPerColors = false }) => {
+  disableTextIndicatorPerColors = false,
+  backgroundColor }) => {
 
   const INTERVAL_PER_DEG = 15;
   const indicatorPerColors = useIndicatorPerColors({
@@ -27,7 +29,7 @@ export const ChartGauge: FunctionComponent<ChartGaugeProps> = ({
   const { handleCalcIndicator } = useIndicator({ intervalPerDeg: INTERVAL_PER_DEG })
 
   return (
-    <S.Container>
+    <S.Container bg={backgroundColor}>
       <S.Gauge>
         {indicatorPerColors}
         <S.GaugeIndicatorBackground rotate={handleCalcIndicator({ maxValue, currentValue })}>

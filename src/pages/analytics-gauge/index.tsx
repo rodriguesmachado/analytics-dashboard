@@ -3,6 +3,7 @@ import Head from "next/head";
 import { ChartGaugePage } from "@modules/ChartGaugePage";
 
 const Home: NextPage = () => {
+
   return (
     <>
       <Head>

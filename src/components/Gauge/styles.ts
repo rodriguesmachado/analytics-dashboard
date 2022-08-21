@@ -1,6 +1,13 @@
 import styled, { css } from "styled-components";
 
-export const Container = styled.div`
+interface ContainerProps {
+  bg?: string
+}
+
+export const Container = styled.div<ContainerProps>`
+  ${({bg}) => bg && css`
+    background: ${bg};
+  `};
   height: 18rem;
   overflow: hidden;
 `;
